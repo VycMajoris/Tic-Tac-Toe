@@ -1,3 +1,7 @@
+:root {
+  --cell-bg-color: palegreen;
+}
+
 *,
 *::before,
 *::after {
@@ -16,6 +20,7 @@ body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  color: white;
 }
 
 img,
@@ -47,4 +52,56 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+/********* Main Container **********/
+
+.container {
+  height: inherit;
+  display: grid;
+  grid-template-rows: 10% 1fr 5%;
+}
+
+/********* HEADER *********/
+
+header,
+footer {
+  background-color: rgb(57, 85, 85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  font-size: 3rem;
+}
+
+footer {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/********* MAIN  **********/
+
+main {
+  display: grid;
+  grid-template-rows: 10% 1fr 10%;
+  place-items: center;
+  font-size: 2rem;
+  color: black;
+}
+
+/********** Gameboard *********/
+
+.gameBoardGrid {
+  height: 100%;
+  aspect-ratio: 1/1;
+  border: 3px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: var(--cell-bg-color);
+}
+
+.gameBoardCell:hover {
+  background-color: red;
 }
