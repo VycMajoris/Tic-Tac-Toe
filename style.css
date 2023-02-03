@@ -105,3 +105,11 @@ main {
 .gameBoardCell:hover {
   background-color: red;
 }
+
+.gameBoardCell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15rem;
+  border: 2px solid black;
+}
