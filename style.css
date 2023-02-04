@@ -99,6 +99,7 @@ main {
   border: 3px solid black;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
   background-color: var(--cell-bg-color);
 }
 
@@ -110,6 +111,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 15rem;
+  font-size: clamp(min(10px, 10%), 100px, 400px);
   border: 2px solid black;
 }
